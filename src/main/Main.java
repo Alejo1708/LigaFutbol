@@ -154,3 +154,66 @@ public class Main {
         liga.getEstadios().add(est4);
         
         // TERMINO ACA
+
+ // PARTE DE jhosusruiz: Demostracion de Polimorfismo, Partidos y Simulacion
+        
+        // DEMOSTRACION DE POLIMORFISMO 
+        System.out.println("________________________________________________________________");
+        System.out.println("|           DEMOSTRACION DE POLIMORFISMO                       |");
+        System.out.println("|         (Metodo mostrarInformacion()                         |");
+        System.out.println("|______________________________________________________________|");
+        
+        // Lista polimorfica: Persona puede contener Jugadores y Arbitros
+        List<Persona> personas = new ArrayList<Persona>();
+        
+        // Agrego un jugador de Nacional
+        List<Jugador> jugadoresNacional = nacional.getJugadores();
+        personas.add(jugadoresNacional.get(0));
+        
+        // Agrego un arbitro
+        personas.add(arb1);
+        
+        // Agrego un jugador de Millonarios
+        List<Jugador> jugadoresMillonarios = millonarios.getJugadores();
+        personas.add(jugadoresMillonarios.get(5));
+        
+        System.out.println("Llamando al metodo mostrarInformacion() en objetos de diferentes tipos");
+        
+        // el mismo metodo se comporta diferente segun el objeto
+        for (Persona p : personas) {
+            p.mostrarInformacion();  
+        }
+        
+        // CREO LOS PARTIDOS (Todos contra todos - 6 partidos) 
+        List<Partido> todosLosPartidos = new ArrayList<Partido>();
+        
+        // cada equipo juega una vez contra los demas
+        Partido p1 = new Partido(nacional, onceCaldas, arb1, est1);
+        Partido p2 = new Partido(america, millonarios, arb2, est3);
+        Partido p3 = new Partido(nacional, america, arb3, est1);
+        Partido p4 = new Partido(onceCaldas, millonarios, arb4, est2);
+        Partido p5 = new Partido(nacional, millonarios, arb1, est1);
+        Partido p6 = new Partido(onceCaldas, america, arb2, est2);
+        
+        todosLosPartidos.add(p1);
+        todosLosPartidos.add(p2);
+        todosLosPartidos.add(p3);
+        todosLosPartidos.add(p4);
+        todosLosPartidos.add(p5);
+        todosLosPartidos.add(p6);
+        
+        // SIMULAR TODOS LOS PARTIDOS 
+        liga.simularFecha(todosLosPartidos);
+        
+        // CREAR Y MOSTRAR TABLA DE POSICIONES 
+        TablaPosiciones tabla = new TablaPosiciones(liga.getEquipos());
+        tabla.ordenarEquipos();  // se ordena por puntos, diferencia de goles, etc.
+        tabla.mostrarTabla();    // Muestra la tabla en consola
+        
+        //  MOSTRAR ESTADISTICAS DE TODOS LOS JUGADORES 
+        liga.mostrarEstadisticasJugadores();
+        
+        // TERMINO ACA 
+
+    }
+}
