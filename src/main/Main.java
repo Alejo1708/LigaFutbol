@@ -89,3 +89,86 @@ public class Main {
         liga.getEquipos().add(onceCaldas);
         
         // FIN INTEGRANTE 1 - Alejo1708
+        // INTEGRANTE 2 - jcvmurillo12: Creacion de mas Equipos, Arbitros y Estadios
+        
+        // AMERICA DE CALI - 11 JUGADORES 
+        // Portero
+        america.getPersonas().add(new Jugador("Jorge Soto", "Portero", 12));
+        
+        // Defensas (4 jugadores)
+        america.getPersonas().add(new Jugador("Mateo Castillo Marquez", "Defensa", 13));
+        america.getPersonas().add(new Jugador("Cristian Tovar", "Defensa", 6));
+        america.getPersonas().add(new Jugador("Jean Carlos Pestaña", "Defensa", 24));
+        america.getPersonas().add(new Jugador("Omar Bertel", "Defensa", 31));
+        
+        // Centrocampistas (3 jugadores)
+        america.getPersonas().add(new Jugador("Cristian Barrios", "Centrocampista", 7));
+        america.getPersonas().add(new Jugador("Sebastian Navarro", "Centrocampista", 21));
+        america.getPersonas().add(new Jugador("Rafael Carrascal", "Centrocampista", 10));
+        
+        // Delanteros (3 jugadores)
+        america.getPersonas().add(new Jugador("Andres Roa", "Delantero", 15));
+        america.getPersonas().add(new Jugador("Luis Ramos", "Delantero", 9));
+        america.getPersonas().add(new Jugador("Jan Lucumi", "Delantero", 17));
+        
+        // MILLONARIOS - 11 JUGADORES 
+        // Portero
+        millonarios.getPersonas().add(new Jugador("Diego Novoa", "Portero", 12));
+        
+        // Defensas (4 jugadores)
+        millonarios.getPersonas().add(new Jugador("Samuel Martin", "Defensa", 3));
+        millonarios.getPersonas().add(new Jugador("Alex Moreno", "Defensa", 29));
+        millonarios.getPersonas().add(new Jugador("Jorge Arias", "Defensa", 17));
+        millonarios.getPersonas().add(new Jugador("Danovis Banguero", "Defensa", 20));
+        
+        // Centrocampistas (3 jugadores)
+        millonarios.getPersonas().add(new Jugador("Stiven Vega", "Centrocampista", 28));
+        millonarios.getPersonas().add(new Jugador("Nicolas Arrevalo", "Centrocampista", 5));
+        millonarios.getPersonas().add(new Jugador("David Macalister Silva", "Centrocampista", 14));
+        
+        // Delanteros (3 jugadores)
+        millonarios.getPersonas().add(new Jugador("Beckham Castro", "Delantero", 11));
+        millonarios.getPersonas().add(new Jugador("Leonardo Castro", "Delantero", 23));
+        millonarios.getPersonas().add(new Jugador("Edwin Mosquera", "Delantero", 70));
+        
+        // Agrego America y Millonarios a la liga
+        liga.getEquipos().add(america);
+        liga.getEquipos().add(millonarios);
+        
+        // CREO LOS 4 ARBITROS 
+        Arbitro arb1 = new Arbitro("Edwin Ferney Trujillo Castro");
+        Arbitro arb2 = new Arbitro("Wilmar Roldan");
+        Arbitro arb3 = new Arbitro("Diego Ulloa Angulo");
+        Arbitro arb4 = new Arbitro("Hector Rivera");
+        
+        // Agrego los arbitros a la liga
+        liga.getArbitros().add(arb1);
+        liga.getArbitros().add(arb2);
+        liga.getArbitros().add(arb3);
+        liga.getArbitros().add(arb4);
+        
+        // CORRECCION 1: Tambien agregar arbitros a GestionArbitros =====
+        liga.getGestionArbitros().agregarArbitro(arb1);
+        liga.getGestionArbitros().agregarArbitro(arb2);
+        liga.getGestionArbitros().agregarArbitro(arb3);
+        liga.getGestionArbitros().agregarArbitro(arb4);
+        
+        // CREO LOS 4 ESTADIOS 
+        Estadio est1 = new Estadio("Atanasio Girardot", "Medellin", 45943);
+        Estadio est2 = new Estadio("Palogrande", "Manizales", 31611);
+        Estadio est3 = new Estadio("Pascual Guerrero", "Cali", 37899);
+        Estadio est4 = new Estadio("El Campin", "Bogota", 39000);
+        
+        // Agrego los estadios a la liga
+        liga.getEstadios().add(est1);
+        liga.getEstadios().add(est2);
+        liga.getEstadios().add(est3);
+        liga.getEstadios().add(est4);
+        
+        // CORRECCION 2: Tambien agregar estadios a GestionEstadios 
+        liga.getGestionEstadios().agregarEstadio(est1);
+        liga.getGestionEstadios().agregarEstadio(est2);
+        liga.getGestionEstadios().agregarEstadio(est3);
+        liga.getGestionEstadios().agregarEstadio(est4);
+        
+        // FIN INTEGRANTE 2 - jcvmurillo12
