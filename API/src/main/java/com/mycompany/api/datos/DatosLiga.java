@@ -6,9 +6,9 @@ import java.util.Map;
 
 public class DatosLiga {
 
-    // =======================
+    // -----------------------
     // EQUIPOS
-    // =======================
+    // -----------------------
     public static final List<String> EQUIPOS = Arrays.asList(
         "Atletico Nacional",
         "Once Caldas",
