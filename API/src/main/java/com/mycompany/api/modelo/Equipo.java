@@ -5,13 +5,12 @@ import java.util.List;
 
 /**
  * Clase Equipo (versión para API)
- * Versión simplificada y autónoma para el módulo API.
  */
 public class Equipo {
     private String nombre;
     private List<Jugador> jugadores;
 
-    // Constructor público que recibe el nombre del equipo
+    // Constructor publico que recibe el nombre del equipo
     public Equipo(String nombre) {
         this.nombre = nombre;
         this.jugadores = new ArrayList<>();
@@ -27,7 +26,7 @@ public class Equipo {
         return jugadores;
     }
 
-    // Permite agregar jugadores si más adelante lo necesitas
+    // Permite agregar jugadores si más adelante si se necesita
     public void agregarJugador(Jugador j) {
         jugadores.add(j);
     }
