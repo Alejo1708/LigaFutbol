@@ -11,6 +11,7 @@ public class Jugador {
         this.dorsal = dorsal;
     }
 
+    // Getters obligatorios para que el JSON se genere bien
     public String getNombre() {
         return nombre;
     }
